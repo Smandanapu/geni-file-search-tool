@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import type { Source } from "../types";
+import type { Source } from "./types";
 
 // Lazy initialization for the AI client
 let ai: GoogleGenAI | null = null;

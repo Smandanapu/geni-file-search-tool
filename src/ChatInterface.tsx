@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import type { ChatMessage, Source } from '../types';
+import type { ChatMessage, Source } from './types';
 import { SparkleIcon, FileIcon } from './icons';
 
 interface ChatInterfaceProps {
@@ -31,7 +31,7 @@ export const ChatBubble: React.FC<{ message: ChatMessage }> = ({ message }) => {
             <div className="mt-2 border-t border-gray-600 pt-2">
                 <h4 className="text-xs font-bold text-gray-400 mb-1">SOURCES:</h4>
                 <div>
-                    {message.sources.map((source, index) => <SourcePill key={`${source.fileName}-${index}`} source={source} />)}
+                    {message.sources.map((source: Source, index: number) => <SourcePill key={`${source.fileName}-${index}`} source={source} />)}
                 </div>
             </div>
         )}
@@ -107,7 +107,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, onSendMe
             className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
             aria-label="Send message"
           >
-            <svg xmlns="http://www.w_3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
               <path d="M3.105 4.29a.75.75 0 011.06-.02l10.25 6.833a.75.75 0 010 1.294l-10.25 6.833a.75.75 0 01-1.04-1.08l2.63-3.51-2.63-3.51a.75.75 0 01.02-1.06z" />
             </svg>
           </button>

@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import type { ManagedFile, ChatMessage, Corpus, Source, CustomMetadata } from './types';
-import { queryWithFiles } from './services/geminiService';
-import { FileUpload } from './components/FileUpload';
-import { FilePreviewList } from './components/FilePreview';
-import { ChatBubble } from './components/ChatInterface';
+import React, { useState, useCallback } from 'react';
+import type { ManagedFile, ChatMessage, Corpus,  CustomMetadata } from './types';
+import { queryWithFiles } from './geminiService';
+import { FileUpload } from './FileUpload';
+import { FilePreviewList } from './FilePreview';
+import { ChatBubble } from './ChatInterface';
 import { SparkleIcon, CopyIcon, ExpandIcon, CheckCircleIcon, SettingsIcon, RemoveIcon, SearchIcon, DocumentChunksIcon, PromptIcon } from './components/icons';
 
 type Step = 'create' | 'upload' | 'index' | 'query';
