@@ -1,4 +1,4 @@
-# import React from 'react';
+import React from 'react';
 import type { ManagedFile } from './types';
 import { RemoveIcon, CheckCircleIcon, FileIcon, SpinnerIcon } from './icons';
 

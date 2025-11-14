@@ -1,4 +1,4 @@
-# import React from 'react';
+import React from 'react';
 
 export const SparkleIcon: React.FC<{ className?: string; title?: string }> = ({ className, title }) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>

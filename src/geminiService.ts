@@ -50,7 +50,7 @@ export async function queryWithFiles(files: File[], query: string) {
     contents: contents,
   });
 
-  const text = response.text;
+  const text = response.text ?? '';
   
   // For this approach, we consider all provided files as potential sources.
   const sources: Source[] = files.map(f => ({ fileName: f.name }));
